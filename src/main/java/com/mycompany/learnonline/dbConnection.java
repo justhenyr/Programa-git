@@ -1,9 +1,12 @@
+//clase para manejar la conexion a la base de datos
 package com.mycompany.learnonline;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class Main {
+public class dbConnection {
+    
     // Variables de conexión
     static String url = "jdbc:mysql://localhost:3307/learn_online";
     static String user = "root";
@@ -12,10 +15,9 @@ public class Main {
     // Metodo para abrir la conexión con MySQL
     public static Connection conectar() {
         Connection con = null;
-        //Usando los datos static string se intenta generar una conexion si los datos son correctos
         try {
-            con = DriverManager.getConnection(url, user, pass); 
-            System.out.println("Conexion Exitosa.");
+            con = DriverManager.getConnection(url, user, pass);
+            System.out.println("Conexion a la base de datos exitosa.");
         } catch (SQLException ex) {
             System.out.println("Error en la conexion: " + ex.getMessage());
         }
@@ -28,12 +30,5 @@ public class Main {
         if (test != null) {
             System.out.println("LearnOnline esta listo.");
         }
- 
-        // Prueba de insercion con crud
-        crud c = new crud();
-        c.insertarDato(0, "nombre", "abc@mail.com");
-        
-     } 
-    //ARREGLAR EL MAIN SEPARAR EL CRUD POR CLASES PARA EL MUESTREO INDIVIDUAL DE CADA UNA
-    //separar las responsabilidades x clases
+   }
 }

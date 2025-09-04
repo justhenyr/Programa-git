@@ -1,3 +1,8 @@
+com\mycompany\learnonline\Eliminar.class
+com\mycompany\learnonline\Usuarios.class
+com\mycompany\learnonline\Lectura.class
+com\mycompany\learnonline\Actualizar.class
+com\mycompany\learnonline\crud.class
 com\mycompany\learnonline\Curso.class
 com\mycompany\learnonline\Main.class
-com\mycompany\learnonline\Usuarios.class
+com\mycompany\learnonline\dbConnection.class
